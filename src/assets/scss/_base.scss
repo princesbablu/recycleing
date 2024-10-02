@@ -1,0 +1,130 @@
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(26px/16px);
+    color: $text;
+    font-family: $font-1;
+    background-color: $bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $white;
+    font-weight: 400;
+    font-family: $font-1;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    border: 1px solid $border;
+    outline: none;
+    @include transition;
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.common {
+    &-padding {
+        --padding-y: 115px;
+        --padding-x: 0;
+        padding: var(--padding-y) var(--padding-x);
+        @include xl {
+            --padding-y: 100px;
+        }
+        @include lg {
+            --padding-y: 100px;
+        }
+        @include md {
+            --padding-y: 80px;
+        }
+        @include sm {
+            --padding-y: 60px;
+        }
+    }
+    &-title {
+        margin-bottom: 60px;
+        @include md {
+            margin-bottom: 40px;
+        }
+        @include sm {
+            margin-bottom: 30px;
+        }
+        & h2 {
+            @include font-68;
+        }
+        & p {
+            @include font-20;
+        }
+    }
+}
+
+// social 
+.social {
+    &-link {
+        --width: 48px;
+        width: var(--width);
+        height: var(--width);
+        background-color: $white;
+        color: $heading;
+        border: 2px solid $heading;
+        box-shadow: 1.6px 1.3px 0 0 $heading;
+        font-size: 24px;
+        border-radius: 8px;
+        @include sm {
+            --width: 44px;
+        }
+        &:hover {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+}
+
+#root {
+    overflow: hidden;
+}
+
+.container {
+    @media (min-width: 1581px) {
+        max-width: calc(1490px + 24px);
+    }
+}

@@ -1,0 +1,146 @@
+.roadmap {
+    background-image: url("../img/roadmap-bg.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: calc(var(--padding-y) * 2);
+    .roadmap-heading {
+        margin-bottom: 130px;
+        @include sm {
+            margin-bottom: 80px;
+        }
+        @include lg {
+            justify-content: center !important;
+        }
+    }
+    &-title {
+        h2 {
+            @include font-88;
+            font-weight: 900;
+            text-shadow: 6px 6px 0px #030606;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #030606;
+            text-transform: uppercase;
+            @include md {
+                font-size: 55px;
+            }
+            @include sm {
+                font-size: 50px;
+            }
+        }
+        .title2 {
+            margin-left: 175px;
+            @include lg {
+                margin-left: 0px;
+            }
+            @include mmd {
+                margin-left: 0px;
+            }
+        }
+    }
+    &-subtitle {
+        p {
+            color: $white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000;
+            @include font-32;
+            font-weight: 900;
+            @include xl {
+                margin-left: 24px;
+                font-size: 22px;
+            }
+            @include lg {
+                font-size: 24px;
+            }
+            @include sm {
+                text-align: center;
+            }
+        }
+    }
+    .itembottom:not(:last-child) {
+        @include lg {
+            margin-bottom: 78px;
+        }
+        @include mmd {
+            margin-bottom: 78px;
+        }
+    }
+    .cardbar {
+        height: 16px;
+        background-color: $black;
+        border-radius: 40px;
+        top: -13%;
+        left: 0;
+        .bar {
+            width: 25%;
+            background-color: $white;
+            border-radius: 40px;
+        }
+        @include lg {
+            display: none;
+        }
+        @include mmd {
+            display: none;
+        }
+    }
+    &-cards {
+        border-radius: 16px;
+        border: 1px solid #281F00;
+        background: $white;
+        box-shadow: 10px 10px 0px 0px #000;
+        padding: 32px 24px;
+        width: 100%;
+        height: 100%;
+        @include mmd {
+            box-shadow: 8px 8px 0px 0px #000;
+        }
+        .bar {
+            width: 100%;
+            height: 1px;
+            color: $black;
+            background-color: $black;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        .count {
+            width: 48px;
+            height: 48px;
+            border-radius: 40px;
+            border: 2px solid #000;
+            // background: #B0D0E9;
+            box-shadow: 3px 3px 0px 0px #000;
+            left: 50%;
+            top: -18%;
+            transform: translateX(-50%);
+            @include sm {
+                top: -19%;
+            }
+            span {
+                font-weight: 700;
+                line-height: 150%;
+                @include font-16;
+                color: $black;
+            }
+        }
+        h5 {
+            @include font-32;
+            color: #060205;
+            font-weight: 900;
+        }
+        ul {
+            li {
+                @include font-24;
+                color: $black;
+                font-weight: 700;
+                line-height: 110%;
+                letter-spacing: -0.118px;
+                @include xxl {
+                    font-size: 20px;
+                }
+                @include xl {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

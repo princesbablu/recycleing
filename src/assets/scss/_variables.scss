@@ -1,0 +1,24 @@
+@import url('https://fonts.cdnfonts.com/css/rubik-one');
+@font-face {
+    font-family: 'Geometria';
+    src: url('../font/geometria-cufonfonts/Geometria-Heavy.ttf') format('truetype');
+}
+
+// $graphik-lcg : 'Graphik-LCG'
+// 
+$font-1:"Geometria",
+sans-serif;
+$font-2:'Rubik One',
+sans-serif;
+// 
+$white:#fff;
+$black:#000;
+$primary: #2AB533;
+$secondary: #050505;
+$text:#C0C3C5;
+$heading: #030606;
+$border:#4B4B4B;
+$bg:#56B4FF;
+:root {
+    scroll-behavior: auto !important;
+}

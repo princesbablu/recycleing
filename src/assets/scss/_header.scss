@@ -1,0 +1,193 @@
+@keyframes headerAnimation {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.logo:not(.banner-bottom .banner-service-wrapper .box-item.cex .logo, .banner-bottom .banner-service-wrapper .box-item .logo) {
+    cursor: pointer;
+    display: block;
+    height: 56px;
+    @include sm {
+        height: 48px;
+        & img {
+            height: 100%;
+        }
+    }
+}
+
+.heading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: transparent;
+    padding: var(--bs-navbar-padding-y) 0;
+    --bs-navbar-padding-y: 40px;
+    @include lg {
+        --bs-navbar-padding-y: 30px;
+    }
+    @include md {
+        --bs-navbar-padding-y: 24px;
+    }
+    @include sm {
+        --bs-navbar-padding-y: 20px;
+    }
+    &-wrap {
+        border-radius: 8px;
+        border: 2px solid $black;
+        background-color: $white;
+        box-shadow: 5px 5px 0px 0px $black;
+        padding: 15px 20px;
+        @include sm {
+            padding: 10px;
+        }
+    }
+    &.position-fixed {
+        animation: headerAnimation .5s linear;
+        background-color: rgba($color: $primary, $alpha: .6);
+        backdrop-filter: blur(3px);
+        --bs-navbar-padding-y: 24px;
+        @include md {
+            --bs-navbar-padding-y: 20px;
+        }
+        @include sm {
+            --bs-navbar-padding-y: 1rem;
+        }
+        & .heading-logo {
+            margin-bottom: 0;
+        }
+    }
+    &-menu {
+        @include mmd {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba($color: $black, $alpha: .90);
+            padding: 20px;
+            transform: translateY(150%);
+            @include transition;
+            z-index: 9;
+            background-image: url(../img/mobile-bg.png);
+            background-size: 100% 100%;
+            background-position: center;
+            &.show-menu {
+                transform: translate(0, 0);
+            }
+        }
+        @include sm {
+            padding: 1rem;
+        }
+        & .title {
+            margin-bottom: 32px;
+            @include sm {
+                margin-bottom: 24px;
+            }
+        }
+        & .heading-actions {
+            @include mmd {
+                margin-top: 32px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            @include sm {
+                margin-top: 26px;
+            }
+        }
+    }
+    & li {
+        margin: 0 2px;
+        @include mmd {
+            margin: 0 0;
+        }
+    }
+    &-link {
+        color: $heading;
+        font-family: $font-2;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        display: flex;
+        padding: 6px 18px;
+        &:hover,
+        &.active {
+            background-color: #030606;
+            color: $white;
+        }
+        @include md {
+            font-size: 1rem;
+        }
+        @include sm {
+            font-size: 18px;
+        }
+    }
+    &-actions {
+        grid-gap: 12px;
+        @include sm {
+            grid-gap: 8px;
+        }
+    }
+    &-toggler {
+        --btn-padding-x: 4px;
+        --btn-padding-y: 5px;
+        padding: var(--btn-padding-y) var(--btn-padding-x);
+        border: none;
+        background-color: transparent;
+        color: $heading;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & svg {
+            --width: 40px;
+            width: var(--width);
+            height: var(--width);
+        }
+    }
+}
+
+.lang {
+    &-btn {
+        border-radius: 12px;
+        border: 2px solid $heading;
+        background-color: $white;
+        box-shadow: 0px 3px 0px $black;
+        padding: 10px 20px;
+        & .text {
+            @include textShadow;
+            color: $white;
+        }
+    }
+    &-list {
+        background-color: $white;
+        border-radius: 4px;
+        padding: 8px 4px;
+        margin-top: 10px;
+        @include hidden;
+        @include transition;
+        &.show {
+            @include show;
+            margin-top: 0;
+        }
+        & li {
+            cursor: pointer;
+            @include textShadow;
+            color: $white;
+            padding: 4px 10px;
+            @include flex;
+            gap: 4px;
+            @include transition;
+            border-radius: 4px;
+            &:hover {
+                background-color: rgba($color: $black, $alpha: .10);
+            }
+        }
+    }
+}

@@ -1,0 +1,386 @@
+.banner {
+    background-color: #27B531;
+    padding-top: 260px;
+    @include xl {
+        padding-top: 220px;
+    }
+    @include lg {
+        padding-top: 190px;
+    }
+    @include md {
+        padding-top: 180px;
+    }
+    @include sm {
+        padding-top: 140px;
+    }
+    &-content {
+        & h1 {
+            color: #FFF;
+            text-shadow: 3px 5px 0px #0B140C;
+            -webkit-text-stroke-width: 1.5px;
+            -webkit-text-stroke-color: #000;
+            font-size: 139px;
+            line-height: calc(120px/139px);
+            letter-spacing: -8.34px;
+            @include xl {
+                font-size: 100px;
+            }
+            @include lg {
+                font-size: 90px;
+            }
+            @include md {
+                font-size: 70px;
+            }
+            @include sm {
+                font-size: 40px;
+                letter-spacing: -2px;
+                text-shadow: 1px 3px 0px #0B140C;
+                -webkit-text-stroke-width: 1px;
+            }
+        }
+    }
+    &-img {
+        @include lg {
+            width: 70%;
+            margin-left: auto;
+        }
+        @include mmd {
+            width: 80%;
+            margin-left: auto;
+        }
+        & .notice {
+            margin-top: 7%;
+            @include xl {
+                margin-left: -9%;
+            }
+            @include lg {
+                margin-left: -40%;
+                width: 60%;
+                & img {
+                    width: 100%;
+                }
+            }
+            @include mmd {
+                margin-left: -28%;
+                width: 54%;
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-bottom {
+        .banner-service-wrapper {
+            .single-item {
+                max-width: 400px;
+                width: 100%;
+                @include lg {
+                    max-width: 47%;
+                }
+                @include mmd {
+                    max-width: 80%;
+                    margin-bottom: 40px;
+                }
+                @include sm {
+                    max-width: 100%;
+                }
+            }
+            .box-item {
+                border-radius: 12px;
+                padding: 30px;
+                border: 3px solid $black;
+                background: #78E2FF;
+                box-shadow: 4px 4px 0px 0px $black;
+                text-align: center;
+                position: relative;
+                z-index: 1;
+                .icon {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    max-width: 90px;
+                    transform: translateX(-50%);
+                    margin-top: -45px;
+                }
+                .logo {
+                    margin-top: 30px;
+                    max-width: 124px;
+                    margin-inline: auto;
+                }
+                h3 {
+                    color: $black;
+                    text-align: center;
+                    font-size: 36px;
+                    font-weight: 900;
+                    line-height: calc(43px/36px);
+                    letter-spacing: -0.084px;
+                    text-transform: uppercase;
+                }
+                p {
+                    color: $black;
+                    text-align: center;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 130%;
+                    /* 20.8px */
+                    letter-spacing: -0.084px;
+                    margin-bottom: 24px;
+                }
+                .boxed-btn {
+                    border-radius: 12px;
+                    border: 3px solid $black;
+                    background: #8F46EB;
+                    box-shadow: 0px 5px 0 $black;
+                    padding: 18px;
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 12px;
+                    @include transition;
+                    &:hover {
+                        box-shadow: 0 0 0;
+                    }
+                    img {
+                        max-width: 132px;
+                    }
+                }
+                .boxed-btn.two {
+                    background: $black;
+                }
+                .boxed-btn.three {
+                    background: #42AA91;
+                }
+                .boxed-btn:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .box-item.cex {
+                background: #28B532;
+                padding: 40px 80px;
+                max-width: 623px;
+                width: 100%;
+                @include xxl {
+                    padding: 40px 20px;
+                    max-width: 440px;
+                }
+                @include xl {
+                    padding-inline: 20px;
+                }
+                @include lg {
+                    padding-inline: 20px;
+                    width: 47%;
+                    max-width: 47%;
+                }
+                @include mmd {
+                    padding-inline: 20px;
+                    width: 80%;
+                    max-width: 80%;
+                }
+                @include sm {
+                    max-width: 100%;
+                    width: 100%;
+                }
+                .logo {
+                    margin-top: 40px;
+                    max-width: 100px;
+                    margin-bottom: 40px;
+                }
+                .tba-inner {
+                    margin-top: 55px;
+                    .tba-btn {
+                        width: calc(50% - 10px);
+                        border-radius: 12px;
+                        border: 3px solid $black;
+                        background-color: #159946;
+                        box-shadow: 0px 5px 0 $black;
+                        padding: 22px 0px;
+                        padding-top: 17px;
+                        color: $white;
+                        text-align: center;
+                        text-shadow: 0px 1px 0px $black;
+                        -webkit-text-stroke-width: .5px;
+                        -webkit-text-stroke-color: $black;
+                        @include font-20;
+                        letter-spacing: -0.084px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        &:hover {
+                            box-shadow: 0 0 0;
+                        }
+                    }
+                }
+            }
+            .box-item.buy {
+                background: #FFFFFE;
+                padding-bottom: 0;
+                padding-inline: 0;
+                flex-direction: column;
+                @include lg {
+                    width: 47%;
+                    max-width: 47%;
+                }
+                @include mmd {
+                    width: 80%;
+                    max-width: 80%;
+                }
+                @include sm {
+                    max-width: 100%;
+                    width: 100%;
+                }
+                .box-inner {
+                    padding-inline: 30px;
+                }
+                .logo {
+                    margin-top: -10px;
+                    max-width: 70px;
+                }
+                .eartn-btn {
+                    border-radius: 12px;
+                    border: 3px solid $black;
+                    background: #28B532;
+                    box-shadow: 0px -5px 0px 3px $black inset;
+                    max-width: 100%;
+                    height: 68px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--white, #FFF);
+                    text-align: center;
+                    text-shadow: 0px 1px 0px $black;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: $black;
+                    font-family: "Rubik One";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 130%;
+                    /* 26px */
+                    letter-spacing: -0.084px;
+                    text-transform: uppercase;
+                    padding-bottom: 9px;
+                    &:hover {
+                        border-color: #28B532;
+                    }
+                }
+                span {
+                    margin-top: 27px;
+                    color: #28B532;
+                    text-align: center;
+                    font-family: Rubik;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 130%;
+                    /* 23.4px */
+                    letter-spacing: -0.084px;
+                    text-decoration-line: underline;
+                    display: inline-block;
+                    margin-bottom: 60px;
+                }
+                .tba-large {
+                    background: rgba(40, 181, 50, 0.03);
+                    backdrop-filter: blur(5px);
+                    display: block;
+                    padding-block: 35px;
+                    padding-inline: 24px;
+                    text-align: start;
+                    &>div {
+                        border-top: 3px solid $heading;
+                        border-top-left-radius: 4px;
+                        border-bottom-left-radius: 4px;
+                    }
+                    h5 {
+                        color: $black;
+                        font-family: Rubik;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 130%;
+                        /* 23.4px */
+                        letter-spacing: -0.084px;
+                    }
+                    p {
+                        margin-bottom: 0;
+                        color: $black;
+                        font-family: Rubik;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 130%;
+                        /* 20.8px */
+                        letter-spacing: -0.084px;
+                        padding-right: 0;
+                        word-break: keep-all;
+                        overflow: hidden;
+                    }
+                    button {
+                        padding: 0;
+                        border: 0;
+                        background: transparent;
+                    }
+                    .token {
+                        padding: 9.442px 12px 9.558px 12px;
+                        border-radius: 8px;
+                        border: 0.999px solid $black;
+                        background: var(--white, #FFF);
+                        box-shadow: 1.999px 3.997px 0px 0px #0E0E00;
+                    }
+                }
+                .bottom {
+                    border-top: 3px solid $black;
+                    background: #FB0000;
+                    padding: 22px;
+                    border-radius: 0px 0px 9px 9px;
+                    p {
+                        color: var(--white, #FFF);
+                        text-align: center;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 130%;
+                        /* 18.2px */
+                        letter-spacing: -0.084px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .box-item.chart {
+                background-color: #2CAC33;
+                padding: 18.5px;
+                p {
+                    color: #2DE836;
+                    text-shadow: 0px -1px 0px $black, -1px 0px 0px $black, 0px 1px 0px $black, 1px 0px 0px $black;
+                    @include font-20;
+                    font-weight: 700;
+                    letter-spacing: -0.084px;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                    svg {
+                        color: $black;
+                    }
+                }
+            }
+            .social-icon {
+                border-radius: 12px;
+                border: 3px solid $black;
+                background: var(--white, #FFF);
+                box-shadow: 0px 3px 0px 2px $black;
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 68px;
+                &:hover {
+                    box-shadow: 0 0 0;
+                }
+                img {
+                    // margin-top: -10px;
+                    max-width: 34px;
+                }
+            }
+            .box-inner {
+                padding-inline: 48px;
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.footer {
+    padding-top: 110px;
+    border-top: 1px solid $white;
+    @include md {
+        padding-top: 80px;
+    }
+    @include sm {
+        padding-top: 50px;
+    }
+    & .logo {
+        & .d-none {
+            display: block !important;
+        }
+        & .d-md-none {
+            display: none !important;
+        }
+    }
+    &-top {
+        & ul {
+            margin-right: -20px;
+            @include md {
+                display: flex;
+                margin-right: -10px;
+            }
+            @include sm {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            & a {
+                @include font-24;
+                padding: 5px 20px;
+                @include md {
+                    padding: 5px 10px;
+                }
+                @include sm {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    & p {
+        color: #324250;
+        font-weight: 500;
+    }
+    &-middle {
+        --bs-border-color: #D9D9D9;
+        & p {
+            @include font-18;
+        }
+    }
+    &-bottom {
+        padding: 40px 0px;
+        @include sm {
+            padding: 30px 0
+        }
+        & p {
+            @include font-20;
+        }
+    }
+}
+
+.token {
+    --bs-border-width: .5px;
+    --bs-border-radius: 8px;
+    background-color: $white;
+    box-shadow: 1px 3px $black;
+    padding: 14px 16px;
+    padding-right: 70px;
+    @include sm {
+        width: 100%;
+    }
+    & p {
+        font-size: 18px;
+        color: $heading;
+        @include sm {
+            font-size: 14px;
+        }
+    }
+    & button {
+        background-color: $primary;
+        color: $white;
+        font-size: 24px;
+        width: 54px;
+    }
+}
